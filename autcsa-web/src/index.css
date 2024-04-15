@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* @font-face {
+    font-family: gdt;
+    src: url(./fonts/fzgdt.ttf) format("ttf");
+  } */
+  @font-face {
+    font-family: fwzz;
+    font-weight: 400;
+    src: url(./fonts/fzfwzz.ttf);
+  }
+  @font-face {
+    font-family: dgt;
+    font-weight: 400;
+    src: url(./fonts/fzgdt.ttf);
+  }
+}
+
+@layer utilities {
+  .text {
+    color: #09f8d1;
+  }
+  .bg-mainRed {
+    background-color: #c8161e;
+  }
+  .bg-subRed {
+    background-color: #96161e;
+  }
+  .titleShadow {
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+  }
+  .z-5 {
+    z-index: 5;
+  }
+  .verticalUpAni {
+    transition: 1s;
+    transform: translateY(-50%);
+  }
+  .horizontalLeftAni {
+    transition: 1s;
+    transform: translateX(50%);
+  }
+  .horizontalRightAni {
+    transition: 1s;
+    transform: translateX(-50%);
+  }
+  .main_events_wrap::before {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    background: #c8161e;
+    height: 70%;
+    width: 2px;
+    top: 600px;
+    bottom: 0;
+  }
+  .loader {
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #aaaaaa;
+    width: 16px;
+    height: 16px;
+    animation: spin 2s linear infinite;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
